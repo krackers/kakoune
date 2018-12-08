@@ -44,7 +44,7 @@ mandir := $(DESTDIR)$(PREFIX)/share/man/man1
 os := $(shell uname)
 
 ifeq ($(os),Darwin)
-    LIBS += -lncurses
+    LIBS += -lncursesw
     CPPFLAGS += -I$(PREFIX)/opt/ncurses/include -I/opt/local/include
     LDFLAGS += -L$(PREFIX)/opt/ncurses/lib -L/opt/local/lib
 else ifeq ($(os),FreeBSD)
