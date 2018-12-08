@@ -45,8 +45,8 @@ os := $(shell uname)
 
 ifeq ($(os),Darwin)
     LIBS += -lncursesw
-    CPPFLAGS += -I$(PREFIX)/opt/ncurses/include -I/opt/local/include
-    LDFLAGS += -L$(PREFIX)/opt/ncurses/lib -L/opt/local/lib
+    CPPFLAGS += -I/usr/local/opt/ncurses/include
+    LDFLAGS += -L/usr/local/opt/ncurses/lib
 else ifeq ($(os),FreeBSD)
     LIBS += -ltinfow -lncursesw
     CPPFLAGS += -I/usr/local/include
